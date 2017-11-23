@@ -1,5 +1,5 @@
 
-$(function(){
+$(() => {
     
             //using promise fetch(url)
             let promise =  fetch('https://jsonprovider.herokuapp.com/todos/?limit=50&sort=id+desc');
