@@ -1,0 +1,36 @@
+Convert ES6 code to ES5 using Babel compiler. Babel is a JavaScript compiler. (http://babeljs.io/) 
+Requirement : You have latest version of node and npm. Any editor like Atom, visual studio code etc. 
+
+Steps :
+1.Create a directory called 'Demo' 
+
+2.Create package.json file For that we use npm npm init So open terminal and run this command 
+
+3.Create a directory called 'es6' 
+
+4.Create a directory called 'es5' 
+
+5.Create main.js file into es6 directory 
+
+6.open terminal , you can also use git bash or command line. In Visual studio code short cut key for opening terminal is ctrl+` 
+
+7.Check your node version which is latest or not. 
+   Using node -v command. 
+   If your node version not latest then download from https://nodejs.org/en/ 
+   Also check npm using npm -v command. If not latest then update using npm install npm@latest -g command. 
+
+8.Now install babel-cli and babel-preset-es2015 packages
+  npm install babel-cli babel-preset-es2015 --save-dev 
+
+9.Create a .babelrc configuration file Add below json into it. 
+  { "presets":[ "es2015" ] } 
+
+10.When we run then we need main.js file into converted es6 to es5 into directory So we have to add scripts build section into package.json file. 
+   "scripts": { "build": "babel es6 -d es5" }, "scripts": { "build": "babel --presets es2015 es6 -d es5" } 
+
+11.Write some sample code into main.js let test='hello'; 
+
+12.build a sample code 
+   npm run build 
+               Compare both code which is same :) Now check es5/main.js , 
+   its shows converted code. You can check e6 compatibility with different browser for that use 
