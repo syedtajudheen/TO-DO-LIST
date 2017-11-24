@@ -4,8 +4,7 @@ const POST_URL="https://jsonprovider.herokuapp.com/todos/";
 
 $(() => {
                 //USING PROMISE FETCH(URL)
-                let promise =  fetch(FETCH_URL);
-                promise.then(response => response.json())
+                 fetch(FETCH_URL).then(response => response.json())
                 .then(data => {
                     $.each(data,(key,value) => {
                         $("#checkbox").prepend('<li><input type="checkbox" id="checkit" class="done"/>&nbsp' + value.title );
