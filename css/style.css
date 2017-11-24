@@ -1,10 +1,11 @@
-h1{
-    
+h1{  
     font-family: Oswald;
 }
+
 #addheight{
     padding-top: 100px;
 }
+
 .bg{
     background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
@@ -18,10 +19,12 @@ h1{
     height: auto;
     z-index: -100;
 }
+
 li{
     
     list-style:none;
 }
+
 .container{
     padding-top: 15px;
 }
