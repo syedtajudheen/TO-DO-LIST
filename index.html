@@ -22,19 +22,15 @@
                 </div>
                 <!--INPUT_AREA-->
                 <div id="addheight" class="text-center"> 
-                    <input type="text" id="gettodo" value="" placeholder="Enter your List">   
-                    <button type="button" id="click"  class="btn btn-default btn-small">SUBMIT</button>
+                    <input type="text" id="gettodo" keypress="gettodo"  placeholder="Enter your List">   
+                    
                 </div>  
-                <!--TODO_LISTS-->
-                <div  class="container">
-                    <div class="row">
-                        <div class="col-lg-4"></div>
-                        <div class="col-lg-4">
-                            <ul id="checkbox"></ul>
-                        </div>
-                        <div class="col-lg-4"></div>
-                    </div>
-                </div> 
+               
+                <div id="list"></div>
                 <script type="text/javascript" src="es5/main.js"></script>
+                <script>
+                $('#list').load("list.html"); 
+                </script>
+                
         </body>
 </html>
