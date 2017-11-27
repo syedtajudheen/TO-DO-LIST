@@ -1,5 +1,5 @@
 
-const FETCH_URL ="https://jsonprovider.herokuapp.com/todos/?limit=50&sort=id+desc";
+const FETCH_URL ="https://jsonprovider.herokuapp.com/todos/?limit=30&sort=id+desc";
 const POST_URL ="https://jsonprovider.herokuapp.com/todos/"
 
 
@@ -8,15 +8,12 @@ $('#gettodo').keypress(function (event) {
  let keycode = (event.keyCode ? event.keyCode : event.which);
     if (keycode == '13') {    
         if ($(this).val() !== '') {
-           let todo = $(this).val();
+          let  todo = $(this).val();
             createTodo(todo);
-        } 
-        else{
-            alert("alert");
-        }
-        
-       
-    }
+        }   
+         
+    }   
+    
 });
 
 
@@ -28,17 +25,18 @@ $('#gettodo').keypress(function (event) {
     .then(data => {
         $.each(data,(key,value) => {
             $("#checkbox").prepend('<li><input type="checkbox" id="mycheckbox" class="done"/>&nbsp' + value.title );
-            $("#mycheckbox").prop('checked', value.completed);
+            $("#mycheckbox").prop('check', value.completed);
         })
     })
     .catch(error => console.log('BAD' , error))
 })(jQuery);
 
 
-let createTodo=(text) => {
-    let todo = $('#gettodo').val();
+let createTodo=(todo) => {
+    //let todo = $('#gettodo').val();
     //console.log(todo);
-  
+
+
             $.ajax ({
                 type: 'POST',
                 url: POST_URL,
@@ -51,9 +49,9 @@ let createTodo=(text) => {
                 console.log("posted successfully", data); 
                 }
             });
-    
+           
       {
-        var markup = '<li> <input type="checkbox" id="mycheckbox" class="done"/>' + text ;
+        var markup = '<li> <input type="checkbox" id="mycheckbox" class="done"/>' + todo ;
         $('#checkbox').prepend(markup);
         $('#gettodo').val('');
     }};(jQuery)

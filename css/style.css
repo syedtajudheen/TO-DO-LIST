@@ -1,4 +1,4 @@
-h1{  
+h2{  
     font-family: Oswald;
 }
 
@@ -23,7 +23,9 @@ h1{
 li{
     list-style:none;
 }
-
+#list{
+    padding-left: 70px;
+}
 .container{
     padding-top: 15px;
 }
